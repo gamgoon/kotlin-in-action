@@ -8,7 +8,11 @@ fun fizzBuzz(i: Int) = when {
 }
 
 fun main(args: Array<String>) {
-    for (i in 1..100) {
+    for (i in 100 downTo 1 step 2) {
+        println(fizzBuzz(i))
+    }
+    println("----------------------------------")
+    for (i in 0 until 100) {
         println(fizzBuzz(i))
     }
 }
