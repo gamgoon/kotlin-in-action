@@ -1,5 +1,6 @@
 package example
 
+import ch03.lastChar
 import inaction.createRandomRectangle
 import java.lang.Exception
 
@@ -8,6 +9,7 @@ fun main(args: Array<String>) {
     println(Color.BLUE.rgb())
     println(getMnemonic(Color.RED))
     println(mix(Color.BLUE, Color.YELLOW))
+    println("Tkkdkd".lastChar)
 }
 
 fun mix(c1: Color, c2: Color) =

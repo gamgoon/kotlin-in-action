@@ -28,6 +28,26 @@ fun main(args: Array<String>) {
     println(joinToString(list))
     println(joinToString(list, postfix = "|", prefix = "|"))
     reportOperationCount()
+
+//    println("Kotlin".lastChar())
+    println("Kotlin".lastChar)
+    val sb = StringBuilder("Kotlin?")
+    sb.lastChar = '!'
+    println(sb)
+
+    val strings: List<String> = listOf("first", "second", "fourteenth")
+    println(strings.last())
+    val map = mapOf(1 to "one", 7 to "seven", 53 to "fifty-three")
+    println(map)
+
+    val (number, name) = 1 to "one"
+    println(number)
+    println(name)
+    val p = "kotlin" to "one"
+    println(p)
+    println(p.first)
+    println(p.second)
+    println(p.toList())
 }
 
 var opCount = 0
@@ -39,3 +59,14 @@ fun performOperation() {
 fun reportOperationCount() {
     println("Operation performed $opCount times")
 }
+
+//fun String.lastChar(): Char = this.get(this.length - 1)
+
+val String.lastChar: Char
+    get() = get(length - 1)
+
+var StringBuilder.lastChar: Char
+    get() = get(length - 1)     // getter
+    set(value: Char) {          // setter
+        this.setCharAt(length - 1, value)
+    }
